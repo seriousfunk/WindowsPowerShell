@@ -1,0 +1,3 @@
+cls
+docker images
+echo ""
