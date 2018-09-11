@@ -12,21 +12,21 @@ if (!(Test-Path -Path $PROFILE ))
 
 More info on [Windows profile directories](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-use-profiles-in-windows-powershell-ise?view=powershell-6) (e.g for Current User, All users).
 
-2. Determine the directory your Windows profile is in.
+2. Go to your $profile directory.
 ```
-> echo $profile
-C:\Users\<your_user_name>\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-```
-
-3. Go to that directory.
-```
-> cd C:\Users\<your_user_name>\OneDrive\Documents\WindowsPowerShell\
+> Split-Path -Path $profile | cd
 ```
 
-4. Clone these scripts.
+3. Clone these scripts.
 ```
 > git clone https://github.com/seriousfunk/WindowsPowerShell.git 
 ```
+
+4. Open an new Powershell window or source your $profile if one is already open
+```
+. $profile
+```
+
 
 
 
