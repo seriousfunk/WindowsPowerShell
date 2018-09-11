@@ -13,7 +13,7 @@ set-alias -name cdc -value $wpsPath\my_scripts\docker-containers.ps1
 # BANNER 
 #################################################################################
 function fortune {
-	$fortuneFile = "$wpsPath\my_scripts\fortunes33.txt"
+	$fortuneFile = "$wpsPath\fortunes\fortunes.txt"
 	if (Test-Path $fortuneFile -PathType Leaf) {
 		$fortunes = Get-Content $fortuneFile -raw
 		Get-Random $fortunes.split('%')
