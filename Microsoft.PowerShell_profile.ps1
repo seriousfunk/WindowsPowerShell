@@ -13,13 +13,17 @@ set-alias -name cdc -value $wpsPath\my_scripts\docker-containers.ps1
 # BANNER 
 #################################################################################
 function fortune {
-	$fortunes = Get-Content $wpsPath\my_scripts\fortune.txt -raw
-	Get-Random $fortunes.split('%')
+	$fortuneFile = "$wpsPath\my_scripts\fortunes33.txt"
+	if (Test-Path $fortuneFile -PathType Leaf) {
+		$fortunes = Get-Content $fortuneFile -raw
+		Get-Random $fortunes.split('%')
+		
+	}
+	else {
+		"`nWithout your space helmet, Dave? You're going to find that rather difficult.`n" 
+	}
 }
+
 
 # Remove the line below if you do not want fortune to run when PowerShell starts
 Write-host ""; fortune | Write-host -foregroundcolor red; Write-host ""
-
-Write-host ""
-Write-host -foregroundcolor red "Without your space helmet, Dave? You're going to find that rather difficult." 
-
