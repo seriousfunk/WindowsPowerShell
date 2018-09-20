@@ -1,5 +1,7 @@
 # WindowsPowerShell
 
+TODO: copy .gitconfig to $home so my git alias work the same way they do on linux
+
 PowerShell scripts for my Windows systems. Like ./bashrc but for Windows.
 
 **Backup your existing WindowsPowerShell profile and scripts first if you want to keep them.**
