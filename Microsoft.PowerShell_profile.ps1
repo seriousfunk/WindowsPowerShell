@@ -11,6 +11,7 @@ set-alias -name cl -value $wpsPath\my_scripts\cls-dir.ps1
 Set-alias -name path -value $wpsPath\my_scripts\show-env-path.ps1
 set-alias -name cdi -value $wpsPath\my_scripts\docker-images.ps1
 set-alias -name cdc -value $wpsPath\my_scripts\docker-containers.ps1
+set-alias -name drmc -value $wpsPath\my_scripts\docker-drmc.ps1
 
 
 # BANNER 
