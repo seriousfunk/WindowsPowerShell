@@ -1,7 +1,5 @@
 # WindowsPowerShell
 
-TODO: copy .gitconfig to $home so my git alias work the same way they do on linux
-
 PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 
 ## Installation
@@ -10,7 +8,7 @@ PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 https://raw.githubusercontent.com/seriousfunk/WindowsPowerShell/master/powershell_flair.ps1
 
 **2.** Set execution policy and run powershell_flair.ps1 script
-* If you are IN the same directory as the script you must specify so using ".\"
+* If you are in the same directory as the script you must specify so using ".\"
 * Answer 'Y' when asked if you want to temporarily set Execution Policy
 ```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\powershell_flair.ps1
@@ -49,4 +47,4 @@ git clone https://github.com/seriousfunk/WindowsPowerShell.git $(Split-Path -Pat
 
 More info on [Windows profile directories](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-use-profiles-in-windows-powershell-ise?view=powershell-6) (e.g for Current User, All users).
 
-
+TODO: copy .gitconfig to $home so my git alias work the same way they do on linux
