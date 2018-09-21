@@ -6,7 +6,8 @@ PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 
 ## One-Command Install
 
-**1.** Download and run powershell_flair.ps1
+**1.** Download and run powershell_flair.ps1. Right-click the link below and save the raw sript data to your PC. 
+https://raw.githubusercontent.com/seriousfunk/WindowsPowerShell/master/powershell_flair.ps1
 
 
 ## Manual Install
