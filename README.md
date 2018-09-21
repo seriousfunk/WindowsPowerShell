@@ -1,16 +1,28 @@
 # WindowsPowerShell
 
-PowerShell scripts for my Windows systems. Like ./bashrc but for Windows.
+PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 
-**Backup your existing WindowsPowerShell profile and scripts first if you want to keep them.**
+## One-Command Install
 
-**1.** Test for and create your Windows $PROFILE directory if it does not already exist
+**1.** Download and run powershell_flair.ps1
+
+
+## Manual Install
+
+This same steps are in powershell_flair.ps1. You may download and run that one script if you like.
+
+**1.**  Backup existing directory if it exists. Otherwise create your Windows $PROFILE directory
 ```
-if (!(Test-Path -Path $PROFILE ))
-{ New-Item -Type File -Path $PROFILE -Force }
+# Test for and create your Windows $PROFILE directory if it does not already exist
+if (!(Test-Path -Path $PROFILE )) {
+  { New-Item -Type File -Path $PROFILE -Force }
+} else {
+    #Backup the files in your $profile directory if it DOES exist    
+    Copy-Item "$(Split-Path -Path $profile)" -Destination "$(Split-Path -Path $profile)_backup_$(get-date -f yyyymmdd_HHmmss)" -Recurse
+}
 ```
 
-**2.** Backup or Delete the files in your $profile directory 
+**2.** Delete the files in your original $profile directory that we just backed up
 ```
 Remove-Item "$(Split-Path -Path $profile)\*" -Recurse
 ```
