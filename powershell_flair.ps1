@@ -1,19 +1,16 @@
-# Test for and create your Windows $PROFILE directory if it does not already exist
-if (!(Test-Path -Path $PROFILE )) {
-  { New-Item -Type File -Path $PROFILE -Force }
-} else {
-    #Backup the files in your $profile directory if it DOES exist    
+# Backup existing Windows $PROFILE directory if it exists
+if (Test-Path -Path $PROFILE) {
     Copy-Item "$(Split-Path -Path $profile)" -Destination "$(Split-Path -Path $profile)_backup_$(get-date -f yyyymmdd_HHmmss)" -Recurse
 }
 
-# Delete the files in your $profile directory
+# Create a new Windows $PROFILE directory
+New-Item -Type File -Path $PROFILE -Force
+
+# Delete the empty Microsoft.PowerShell_profile.ps1 the previous command created
 Remove-Item "$(Split-Path -Path $profile)\*" -Recurse
 
-# Go to your $profile directory.
-Split-Path -Path $profile | cd
-
-# Clone these scripts into the directory you just CD'd to (use the . at the end of command)
-git clone https://github.com/seriousfunk/WindowsPowerShell.git .
+# Clone these scripts into your Windows $PROFILE directory
+git clone https://github.com/seriousfunk/WindowsPowerShell.git $(Split-Path -Path $profile)
 
 # Open an new Powershell window or source your $profile if one is already open
 . $profile
