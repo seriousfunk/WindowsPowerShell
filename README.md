@@ -33,14 +33,9 @@ New-Item -Type File -Path $PROFILE -Force
 Remove-Item "$(Split-Path -Path $profile)\*" -Recurse
 ```
 
-**3.** Go to your $profile directory.
+**4.** Clone these scripts into your Windows $PROFILE directory 
 ```
-Set-Location -Path $(Split-Path -Path $profile)
-```
-
-**4.** Clone these scripts into the directory you just CD'd to (use the . at the end of command)
-```
-git clone https://github.com/seriousfunk/WindowsPowerShell.git .
+git clone https://github.com/seriousfunk/WindowsPowerShell.git $(Split-Path -Path $profile)
 ```
 
 **5.** Open an new Powershell window or source your $profile if one is already open
