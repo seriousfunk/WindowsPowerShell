@@ -10,8 +10,10 @@ PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 https://raw.githubusercontent.com/seriousfunk/WindowsPowerShell/master/powershell_flair.ps1
 
 **2.** Set execution policy and run powershell_flair.ps1 script
+* If you are IN the same directory as the script you must specify so using ".\"
+* Answer 'Y' when asked if you want to temporarily set Execution Policy
 ```
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; powershell_flair.ps1
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\powershell_flair.ps1
 ```
 This command sets the execution policy to bypass for only the current PowerShell session  After the window is closed, the next PowerShell session will open running with the default execution policy.
 
