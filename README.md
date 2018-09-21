@@ -32,7 +32,7 @@ New-Item -Type File -Path $PROFILE -Force
 
 **3.** Delete the empty Microsoft.PowerShell_profile.ps1 the previous command created
 ```
-Remove-Item "$(Split-Path -Path $profile)\*" -Recurse
+Remove-Item "$(Split-Path -Path $profile)\*" -Recurse -Force
 ```
 
 **4.** Clone these scripts into your Windows $PROFILE directory 
