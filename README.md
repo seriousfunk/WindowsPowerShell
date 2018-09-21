@@ -26,7 +26,9 @@ if (Test-Path -Path $PROFILE) {
 }
 ```
 **2.** Create a new Windows $PROFILE directory
+```
 New-Item -Type File -Path $PROFILE -Force
+```
 
 **3.** Delete the empty Microsoft.PowerShell_profile.ps1 the previous command created
 ```
