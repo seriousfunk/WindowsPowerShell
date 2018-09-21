@@ -4,11 +4,16 @@ TODO: copy .gitconfig to $home so my git alias work the same way they do on linu
 
 PowerShell scripts for my Windows systems. Like .bashrc but for Windows.
 
-## One-Command Install
+## Installation
 
 **1.** Download and run powershell_flair.ps1. Right-click the link below and save the raw sript data to your PC. 
 https://raw.githubusercontent.com/seriousfunk/WindowsPowerShell/master/powershell_flair.ps1
 
+**2.** Set execution policy
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; powershell_flair.ps1
+```
+This command sets the execution policy to bypass for only the current PowerShell session  After the window is closed, the next PowerShell session will open running with the default execution policy.
 
 ## Manual Install
 
