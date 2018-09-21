@@ -19,10 +19,9 @@ This command sets the execution policy to bypass for only the current PowerShell
 
 This same steps are in powershell_flair.ps1. You may download and run that one script if you like.
 
-**1.**  Backup existing directory if it exists. Otherwise create your Windows $PROFILE directory
+**1.**  Backup existing directory if it exists.
 ```
 if (Test-Path -Path $PROFILE) {
-    #Backup the files in your $profile directory if it DOES exist    
     Copy-Item "$(Split-Path -Path $profile)" -Destination "$(Split-Path -Path $profile)_backup_$(get-date -f yyyymmdd_HHmmss)" -Recurse
 }
 ```
