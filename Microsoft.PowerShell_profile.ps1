@@ -8,6 +8,7 @@ $wpsPath = Split-Path -Path $profile
 set-alias -name gh -value get-help 
 set-alias -name c -value cls
 set-alias -name cl -value $wpsPath\my_scripts\cls-dir.ps1
+set-alias -name la -value $wpsPath\my_scripts\la.ps1
 Set-alias -name path -value $wpsPath\my_scripts\show-env-path.ps1
 set-alias -name cdi -value $wpsPath\my_scripts\docker-images.ps1
 set-alias -name cdc -value $wpsPath\my_scripts\docker-containers.ps1
