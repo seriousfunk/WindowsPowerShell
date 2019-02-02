@@ -15,7 +15,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\powershell_flair.p
 ```
 This command sets the execution policy to bypass for only the current PowerShell session. After the window is closed, the next PowerShell session will open running with the default execution policy.
 
-- Type 'mcs' at the Powershell prompt to see some handy aliases this Powershell profile sets for you.
+**3.** Type `mcs` at the Powershell prompt to see some handy aliases this Powershell profile sets for you.
 
 ## Manual Install
 
