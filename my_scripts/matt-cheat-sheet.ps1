@@ -12,7 +12,8 @@ Write-host "Docker" -foregroundcolor yellow
 Write-host "-------------------------------------------------------" -foregroundcolor yellow
 Write-host "dc   - Alias for docker-compose";
 Write-host "cdi  - Clear the screen then list all Docker images."; 
-Write-host "cdc  - Clear the screen then list all Docker containers."; 
+Write-host "cdc  - Clear the screen then list all Docker containers (narrow)."; 
+Write-host "cdd  - Clear the screen then list all Docker containers (wide)."; 
 Write-host "drmc - Stop and Remove all Docker containers."; 
 Write-host ""; 
 Write-host "Command Line" -foregroundcolor yellow
