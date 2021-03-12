@@ -15,6 +15,11 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\powershell_flair.p
 ```
 This command sets the execution policy to bypass for only the current PowerShell session. After the window is closed, the next PowerShell session will open running with the default execution policy.
 
+You may, however, need to set Execution Policy to RemoteSigned so that this script and other local scripts you've written may be run.
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 **3.** Type `mcs` at the Powershell prompt to see some handy aliases this Powershell profile sets for you.
 
 ## Manual Install
